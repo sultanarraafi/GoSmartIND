@@ -72,6 +72,3 @@ Mohon informasi selanjutnya mengenai pendaftaran ini. Terima kasih!"""
 @app.route('/daftar_siswa')
 def halaman_hasil():
     return render_template('hasil.html', data_siswa=data_pendaftar)
-
-# if __name__ == '__main__':
-#     app.run(debug=True)

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Siswa</title>
+</head>
+
+<body style="font-family :Verdana, Geneva, Tahoma, sans-serif; margin : 40px;">
+    
+    <h2>Daftar Siswa Terdaftar</h2>
+
+    <p style="color : green"><b>Menampilkan data terbaru!</b></p>
+
+    <table border="1" cellpadding="5" cellspacing="0">
+    <tr style="background-color : f2f2f2;">
+        <th>Nama Siswa</th>
+        <th>Jenis Kelamin</th>
+        <th>Kelas</th>
+        <th>Nama Sekolah</th>
+        <th>Alamat Lengkap</th>
+        <th>Mata Pelajaran</th>
+        <th>Nama Orang Tua/Wali</th>
+        <th>Nomor HP</th>
+    </tr>
+    
+    {% for siswa in data_siswa %}
+    <tr>
+        <td>{{ siswa.siswa }}</td>
+        <td>{{ siswa.jk }}</td>
+        <td>{{ siswa.kls }}</td>
+        <td>{{ siswa.sekolah }}</td>
+        <td>{{ siswa.alamat }}</td>
+        <td>{{ siswa.mapel }}</td>
+        <td>{{ siswa.ortu }}</td>
+        <td>{{ siswa.hp }}</td>
+    </tr>
+    {% else %}
+        <tr>
+            <td colspan="8" style="text-align : center">Belum ada siswa yang mendaftar.</td>
+        </tr>
+    {% endfor %}
+    </table>
+    <br><br>
+    <a href="/" style="padding: 10px; background-color: #4CAF50; color: white; text-decoration: none;">Kembali ke Formulir</a>
+</body>
+</html>
